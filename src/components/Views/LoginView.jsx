@@ -1,5 +1,9 @@
 import '../Styles/Login.css' 
 import UserValidator from '../../helpers/UserValidator'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 const LoginView = () => {
 
@@ -10,6 +14,21 @@ const LoginView = () => {
         const {emailInput, passInput} = e.target
         const email = emailInput.value; const password = passInput.value
         
+        const checkEmail = CheckEmail(email)
+        const checkPassword = CheckPassword(password)
+
+        MySwal.fire({
+            title: <p>{checkEmail.isGood && checkPassword.isGood ? 'Welcome Again' : 'Error'}</p>,
+            html: <p>{!checkEmail.isGood ? checkEmail.messages[0]
+            : !checkPassword.isGood ? checkPassword.messages[0]
+            : 'Login Sucessfully'}</p>
+            ,icon: checkEmail.isGood && checkPassword.isGood ? 'success' : 'error'
+          }).then(() => {
+                if(checkEmail.isGood && checkPassword.isGood){
+                    
+                }
+          })
+
     }
 
     return <>
