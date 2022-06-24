@@ -1,0 +1,18 @@
+.searchBox{
+    font-family: 'Oswald';
+    font-weight: 200 !important;
+    padding: 0.6rem !important;
+}
+
+.searchButton{
+    padding: 0.6rem !important;
+    border: gainsboro solid;
+    border-radius: 50%;
+}
+
+.searchButton img{
+    position: absolute;
+    width: 1vw;
+    left: 0.35vw;
+    top: 0.7vh;
+}

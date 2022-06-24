@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+#root{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+#root{
+    background-color: gainsboro;
+}
