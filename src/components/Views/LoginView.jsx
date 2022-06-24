@@ -1,10 +1,15 @@
 import '../Styles/Login.css' 
+import UserValidator from '../../helpers/UserValidator'
 
 const LoginView = () => {
+
+    const {CheckEmail, CheckPassword} = UserValidator
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const {emailInput, passInput} = e.target
         const email = emailInput.value; const password = passInput.value
+        
     }
 
     return <>
