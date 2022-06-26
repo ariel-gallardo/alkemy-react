@@ -36,7 +36,7 @@ const UserValidator = {
         }
 
         const checkFormat = password.match(/[aA0-zZ9]*/)
-        const checkLength = password.length >= 6 && password.length <= 20
+        const checkLength = password.length >= 5 && password.length <= 20
 
         if(!checkFormat){
             result.isGood = false
@@ -44,7 +44,7 @@ const UserValidator = {
         }else{
             if(!checkLength){
                 result.isGood = false
-                result.messages.push('Password length must be 6 - 20 characters.')
+                result.messages.push('Password length must be 5 - 20 characters.')
             }
         }
 
