@@ -1,7 +1,11 @@
+import { useLocation } from 'react-router-dom'
 import '../Styles/SearchBox.css' 
 
 const SearchBox = () => {
 
+    const {pathname} = useLocation()
+    
+    if(pathname === '/movie/list')
     return <div className="nav-item d-flex flex-column justify-content-center">
         <div className="d-flex h-25">
             <input className="form-control me-1 searchBox" placeholder="Movie name..."/>
