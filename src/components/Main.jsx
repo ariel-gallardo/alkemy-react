@@ -5,6 +5,7 @@ import ProfileView from './Views/ProfileView'
 import MoviesListView from './Views/MoviesListView'
 import { MovieDetail } from './Elements/MovieDetail'
 import { ErrorView } from './Views/404View'
+import FavouritesView from './Views/FavouritesView'
 
 const Main = () => {
     return <main className='d-flex flex-column justify-content-center bg-light'>
@@ -14,6 +15,7 @@ const Main = () => {
                 <Route path='/movie'>
                     <Route path='list' element={<MoviesListView/>}/>
                     <Route path='detail/:id' element={<MovieDetail/>}/>
+                    <Route path='favourites' element={<FavouritesView/>}/>
                 </Route>
                 <Route path='/user'>
                     <Route path='login' element={<LoginView/>}/>

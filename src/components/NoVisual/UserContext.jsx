@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { createContext, useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
 
@@ -46,8 +47,6 @@ export const UserContextProvider = ({children}) => {
 
         localStorage.setItem('favourites',f)
         setFavourites(f)
-
-        console.log(Favourites)
     }
 
     const RedirectToLogin = () => {if(!Token) navigate('/user/login')}
@@ -62,7 +61,7 @@ export const UserContextProvider = ({children}) => {
         RedirectToProfile,
         navigate,
         changeFavouriteStatus,
-        Favourites
+        Favourites: Favourites.length === 0 ? [] : Favourites.split(',')
     }}>
         {children}
     </UserContext.Provider>
