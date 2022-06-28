@@ -56,9 +56,10 @@ export const MoviesDBContextProvider = ({children}) => {
     }
 
     const filterMovie = (movie) => {
-        const {original_title, genres, overview, spoken_languages, release_date, poster_path} = movie
+        const {original_title, genres, overview, spoken_languages, release_date, poster_path, id} = movie
 
         return {
+            id,
             title: original_title,
             genres: genres?.map(g => {return g.name}),
             overview,
@@ -68,7 +69,15 @@ export const MoviesDBContextProvider = ({children}) => {
         }
     }
 
-    const loadMovie = async (id) => filterMovie(await (await fetch(movieDetailUrl(id))).json())
+    const loadMovie = async (id) => {
+
+        let movie = Movies.find(m => m.id === id)
+
+        if(!movie)
+            movie = await (await fetch(movieDetailUrl(id))).json()
+
+        return filterMovie(movie)
+    }
 
     const loadMovies = async () => {
         const {results, total_pages, total_results} = await (await fetch(moviesListUrl(Page))).json()
