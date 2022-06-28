@@ -1,0 +1,25 @@
+.noFavMovie{
+    font-size: xx-small;
+    padding: 0.8vw;
+    transition: 0.5s;
+}
+
+.favMovie{
+    padding: 0.34vw;
+    transition: 0.5s;
+}
+
+.favMovie::selection, .noFavMovie::selection{
+    background-color: transparent;
+}
+
+.btnFav{
+    background-color: white;
+    position: absolute;
+    right: 1vw;
+    top: 1.8vh;
+}
+
+.favContainer{
+    position: relative;
+}

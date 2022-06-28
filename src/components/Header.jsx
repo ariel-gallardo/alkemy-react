@@ -10,6 +10,7 @@ const Header = () => {
             <div className="nav-item d-flex itemsNavbar">
                 <Link to="/" className="nav-link text-light"><img width='150vw' src='/assets/images/logoMovies.svg' alt='MoviesApp'/></Link>
                 <Link to="/movie/list" className="nav-link text-light p-lg-3">Movies</Link>
+                <Link to="/movie/favourites" className="nav-link text-light p-lg-3">Favourites</Link>
             </div>
             <SearchBox/>
             <ProfileLink/>
