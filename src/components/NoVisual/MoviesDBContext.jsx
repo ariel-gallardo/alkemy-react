@@ -110,6 +110,7 @@ export const MoviesDBContextProvider = ({children}) => {
         Page, setPage,
         searchFromQuery: (query) => {setQuery(query); setLoad(true)},
         searchAll: () => {setQuery(''); setLoad(true)},
+        setLoad,
         loadMovie,
         resetToDefault
     }}>{children}</Provider>
