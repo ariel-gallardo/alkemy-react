@@ -1,4 +1,4 @@
-<h1>Alkemy Challenge</h1>
+<h1>Alkemy Challenge - Skill Up I</h1>
 </hr>
 <p>
     This challenge uses <a href="">MoviesDB API</a>. 
