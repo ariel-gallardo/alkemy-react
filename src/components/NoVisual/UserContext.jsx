@@ -61,7 +61,7 @@ export const UserContextProvider = ({children}) => {
         RedirectToProfile,
         navigate,
         changeFavouriteStatus,
-        Favourites: Favourites.length === 0 ? [] : Favourites.split(',')
+        Favourites
     }}>
         {children}
     </UserContext.Provider>
